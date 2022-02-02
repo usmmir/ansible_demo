@@ -1,0 +1,9 @@
+---
+
+# This playbook uses a role to insert a line into a text file
+
+- hosts: node1
+  gather_facts: yes
+  become: true
+  roles:
+    - demo1_ansible

@@ -1,0 +1,12 @@
+[all:vars]
+ansible_port= 22
+ansible_ssh_pass= 
+ansible_user= 
+
+[web]
+node1 ansible_host=
+node2 ansible_host=
+node3 ansible_host=
+
+[control]
+ansible-1 ansible_host=

@@ -1,0 +1,18 @@
+---
+# Role for demo1_ansible playbook
+
+- name: Hello world file
+  ansible.builtin.file:
+    state: touch
+    path: /home/ec2-user/hello2.txt
+    owner: ec2-user
+    group: ec2-user
+    mode: "u=rw,g=r,o=r"
+
+- name: Adding greeting to file
+  ansible.builtin.lineinfile:
+    path: /home/ec2-user/hello2.txt
+    line: "Hello again world!"
+    create: yes
+    owner: ec2-user
+    group: ec2-user

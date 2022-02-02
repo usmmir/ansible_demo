@@ -1,0 +1,10 @@
+---
+# Role for demo2_ansible. This demo uses variables and templates
+
+- name: Using template demo
+  ansible.builtin.template:
+    src: "{{ TestFileName }}"
+    dest: "/home/ec2-user/{{ TestFileName }}"
+    owner: ec2-user
+    group: ec2-user
+    mode: "u=rw,g=r,o=r"
